@@ -1,0 +1,27 @@
+{
+  "name": "grapplehook-site",
+  "private": true,
+  "license": "MIT",
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@11.24.0",
+  "scripts": {
+    "dev": "vite dev --port 4630 --strictPort",
+    "build": "vite build && grep -q 'name=\"robots\" content=\"noindex\"' build/404.html",
+    "preview": "vite preview --port 4631",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json && node src/lib/release.check.js"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "4.0.1",
+    "@sveltejs/kit": "3.2.0",
+    "@sveltejs/vite-plugin-svelte": "7.3.1",
+    "svelte": "5.57.3",
+    "svelte-check": "4.7.8",
+    "typescript": "6.0.3",
+    "vite": "8.3.8",
+    "wrangler": "4.157.0"
+  },
+  "imports": {
+    "#lib/*": "./src/lib/*"
+  }
+}

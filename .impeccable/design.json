@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-19T23:22:28+00:00",
+  "title": "Design System: Grapplehook site",
+  "extensions": {
+    "colorMeta": {
+      "tag": {
+        "role": "primary",
+        "displayName": "Rope Orange",
+        "canonical": "#ff8a3d",
+        "tonalRamp": [
+          "oklch(15% 0.042 51)",
+          "oklch(26% 0.073 51)",
+          "oklch(38% 0.105 51)",
+          "oklch(49% 0.137 51)",
+          "oklch(61% 0.165 51)",
+          "oklch(72% 0.133 51)",
+          "oklch(84% 0.101 51)",
+          "oklch(95% 0.069 51)"
+        ]
+      },
+      "tag-hover": {
+        "role": "primary",
+        "displayName": "Warm Rope Hover",
+        "canonical": "#ff9d5c",
+        "tonalRamp": [
+          "oklch(15% 0.036 53)",
+          "oklch(26% 0.063 53)",
+          "oklch(38% 0.090 53)",
+          "oklch(49% 0.117 53)",
+          "oklch(61% 0.140 53)",
+          "oklch(72% 0.113 53)",
+          "oklch(84% 0.086 53)",
+          "oklch(95% 0.059 53)"
+        ]
+      },
+      "tag-ink": {
+        "role": "primary",
+        "displayName": "Print Ink",
+        "canonical": "#16120d",
+        "tonalRamp": [
+          "oklch(15% 0.012 73)",
+          "oklch(26% 0.012 73)",
+          "oklch(38% 0.012 73)",
+          "oklch(49% 0.012 73)",
+          "oklch(61% 0.012 73)",
+          "oklch(72% 0.012 73)",
+          "oklch(84% 0.012 73)",
+          "oklch(95% 0.012 73)"
+        ]
+      },
+      "tag-ink-2": {
+        "role": "primary",
+        "displayName": "Faded Print",
+        "canonical": "#4a2a12",
+        "tonalRamp": [
+          "oklch(15% 0.015 55)",
+          "oklch(26% 0.026 55)",
+          "oklch(38% 0.038 55)",
+          "oklch(49% 0.049 55)",
+          "oklch(61% 0.059 55)",
+          "oklch(72% 0.048 55)",
+          "oklch(84% 0.036 55)",
+          "oklch(95% 0.025 55)"
+        ]
+      },
+      "tag-ink-hover": {
+        "role": "primary",
+        "displayName": "Stub Button Hover",
+        "canonical": "#2b2219",
+        "tonalRamp": [
+          "oklch(15% 0.021 67)",
+          "oklch(26% 0.021 67)",
+          "oklch(38% 0.021 67)",
+          "oklch(49% 0.021 67)",
+          "oklch(61% 0.021 67)",
+          "oklch(72% 0.021 67)",
+          "oklch(84% 0.021 67)",
+          "oklch(95% 0.021 67)"
+        ]
+      },
+      "tag-well": {
+        "role": "primary",
+        "displayName": "Ink Well",
+        "canonical": "rgb(22 18 13 / 0.1)",
+        "tonalRamp": [
+          "oklch(15% 0.012 73)",
+          "oklch(26% 0.012 73)",
+          "oklch(38% 0.012 73)",
+          "oklch(49% 0.012 73)",
+          "oklch(61% 0.012 73)",
+          "oklch(72% 0.012 73)",
+          "oklch(84% 0.012 73)",
+          "oklch(95% 0.012 73)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Ground",
+        "canonical": "#121110",
+        "tonalRamp": [
+          "oklch(15% 0.003 68)",
+          "oklch(26% 0.003 68)",
+          "oklch(38% 0.003 68)",
+          "oklch(49% 0.003 68)",
+          "oklch(61% 0.003 68)",
+          "oklch(72% 0.003 68)",
+          "oklch(84% 0.003 68)",
+          "oklch(95% 0.003 68)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Field",
+        "canonical": "#1e1c19",
+        "tonalRamp": [
+          "oklch(15% 0.006 78)",
+          "oklch(26% 0.006 78)",
+          "oklch(38% 0.006 78)",
+          "oklch(49% 0.006 78)",
+          "oklch(61% 0.006 78)",
+          "oklch(72% 0.006 78)",
+          "oklch(84% 0.006 78)",
+          "oklch(95% 0.006 78)"
+        ]
+      },
+      "field-2": {
+        "role": "neutral",
+        "displayName": "Raised Field",
+        "canonical": "#2a2723",
+        "tonalRamp": [
+          "oklch(15% 0.008 75)",
+          "oklch(26% 0.008 75)",
+          "oklch(38% 0.008 75)",
+          "oklch(49% 0.008 75)",
+          "oklch(61% 0.008 75)",
+          "oklch(72% 0.008 75)",
+          "oklch(84% 0.008 75)",
+          "oklch(95% 0.008 75)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#3a352f",
+        "tonalRamp": [
+          "oklch(15% 0.012 72)",
+          "oklch(26% 0.012 72)",
+          "oklch(38% 0.012 72)",
+          "oklch(49% 0.012 72)",
+          "oklch(61% 0.012 72)",
+          "oklch(72% 0.012 72)",
+          "oklch(84% 0.012 72)",
+          "oklch(95% 0.012 72)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Bone",
+        "canonical": "#efe7da",
+        "tonalRamp": [
+          "oklch(15% 0.019 80)",
+          "oklch(26% 0.019 80)",
+          "oklch(38% 0.019 80)",
+          "oklch(49% 0.019 80)",
+          "oklch(61% 0.019 80)",
+          "oklch(72% 0.019 80)",
+          "oklch(84% 0.019 80)",
+          "oklch(95% 0.019 80)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Dust",
+        "canonical": "#a69c8f",
+        "tonalRamp": [
+          "oklch(15% 0.022 75)",
+          "oklch(26% 0.022 75)",
+          "oklch(38% 0.022 75)",
+          "oklch(49% 0.022 75)",
+          "oklch(61% 0.022 75)",
+          "oklch(72% 0.022 75)",
+          "oklch(84% 0.022 75)",
+          "oklch(95% 0.022 75)"
+        ]
+      },
+      "ok": {
+        "role": "state",
+        "displayName": "Done Green",
+        "canonical": "#6fd18f",
+        "tonalRamp": [
+          "oklch(15% 0.033 153)",
+          "oklch(26% 0.059 153)",
+          "oklch(38% 0.084 153)",
+          "oklch(49% 0.109 153)",
+          "oklch(61% 0.131 153)",
+          "oklch(72% 0.106 153)",
+          "oklch(84% 0.081 153)",
+          "oklch(95% 0.055 153)"
+        ]
+      },
+      "bad": {
+        "role": "state",
+        "displayName": "Failed Red",
+        "canonical": "#f0625a",
+        "tonalRamp": [
+          "oklch(15% 0.044 26)",
+          "oklch(26% 0.078 26)",
+          "oklch(38% 0.112 26)",
+          "oklch(49% 0.145 26)",
+          "oklch(61% 0.175 26)",
+          "oklch(72% 0.141 26)",
+          "oklch(84% 0.107 26)",
+          "oklch(95% 0.074 26)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; closing headline and 404 use clamp(3rem, 6-7vw, 5rem)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Each dark section tag's title, over a 2px line rule."
+      },
+      "tag-title": {
+        "displayName": "Tag title",
+        "purpose": "\"For {OS}\" printed on the download tag."
+      },
+      "claim": {
+        "displayName": "Claim",
+        "purpose": "Version on the download stub; 2rem at <=720px."
+      },
+      "claim-dark": {
+        "displayName": "Claim (dark)",
+        "purpose": "Count on dark stubs and two-digit step numerals."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "h3 subheads inside tags."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text; ledes 1.06rem at 62ch, hero subline 1.19rem at 40ch."
+      },
+      "body-sm": {
+        "displayName": "Body small",
+        "purpose": "Nav, tabs, helper lines; 0.88rem for footer and table status."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "The one tracked-caps size: field and stub labels."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Site easing token (--ease)."
+      },
+      {
+        "name": "state",
+        "value": "120ms ease-out",
+        "purpose": "Background and colour changes on buttons, nav links and tabs."
+      },
+      {
+        "name": "reveal",
+        "value": "300ms ease-out",
+        "purpose": "Knots and ties fading in as the rope reaches them."
+      },
+      {
+        "name": "swing",
+        "value": "2.2s damped pendulum, cubic-bezier(0.37, 0, 0.63, 1) per turn; amplitude 7deg (download tag) / 1.2deg (dark tags)",
+        "purpose": "Each tag swings once on its eyelet when it enters view; off for dark tags at <=720px and for reduced motion."
+      },
+      {
+        "name": "rope-draw",
+        "value": "stroke-dashoffset tied to scroll, reach = 90% of viewport",
+        "purpose": "The rope draws itself down the page; full rope at the page bottom and under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack",
+        "value": "1080px"
+      },
+      {
+        "name": "phone",
+        "value": "720px"
+      }
+    ],
+    "ropeGutter": [
+      {
+        "name": "--rope-x",
+        "value": "64px",
+        "mobile": "20px",
+        "purpose": "x of the rope and knots."
+      },
+      {
+        "name": "--gutter",
+        "value": "128px",
+        "mobile": "44px",
+        "purpose": "Left padding of every .hang section, clearing the rope."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Default Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "The only neutral action: dark-stub actions and the 404 return link.",
+      "html": "<a class=\"ds-btn\" href=\"#\">View source</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:6px;background:var(--field-2,#2a2723);color:var(--ink,#efe7da);font:600 1rem system-ui,sans-serif;text-decoration:none;transition:background 120ms ease-out}.ds-btn:hover{background:var(--line,#3a352f)}.ds-btn:focus-visible{outline:2px solid var(--tag,#ff8a3d);outline-offset:2px}"
+    },
+    {
+      "name": "Take Button",
+      "kind": "button",
+      "refersTo": "button-take",
+      "description": "Ink Download button printed on the orange stub.",
+      "html": "<div class=\"ds-take-bg\"><a class=\"ds-take\" href=\"#\">Download</a></div>",
+      "css": ".ds-take-bg{background:var(--tag,#ff8a3d);padding:16px;width:152px}.ds-take{display:flex;align-items:center;justify-content:center;min-height:56px;padding:8px 12px;border-radius:6px;background:var(--tag-ink,#16120d);color:var(--tag,#ff8a3d);font:700 1.06rem system-ui,sans-serif;text-decoration:none;transition:background 120ms ease-out}.ds-take:hover{background:var(--tag-ink-hover,#2b2219)}.ds-take:focus-visible{outline:2px solid var(--tag-ink,#16120d);outline-offset:2px}"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Header section links beside the wordmark.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-mark\">grapplehook</span><a href=\"#\">How it works</a><a href=\"#\">Tools</a><a href=\"#\">Source</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:4px;background:var(--ground,#121110);padding:16px}.ds-mark{font:700 1.6rem/1 'Barlow Condensed',system-ui,sans-serif;color:var(--ink,#efe7da);margin-right:auto;padding-right:24px}.ds-nav a{padding:8px 12px;border-radius:6px;color:var(--muted,#a69c8f);font:600 0.94rem system-ui,sans-serif;text-decoration:none;transition:background 120ms ease-out,color 120ms ease-out}.ds-nav a:hover{background:var(--field-2,#2a2723);color:var(--ink,#efe7da)}.ds-nav a:focus-visible{outline:2px solid var(--tag,#ff8a3d);outline-offset:2px}"
+    },
+    {
+      "name": "Badge",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Inline name for a Tool kind after an h3.",
+      "html": "<span class=\"ds-badge\">Managed Tool</span>",
+      "css": ".ds-badge{display:inline-block;padding:2px 8px;border-radius:4px;background:var(--field-2,#2a2723);color:var(--muted,#a69c8f);font:600 0.75rem system-ui,sans-serif;letter-spacing:0.04em}"
+    },
+    {
+      "name": "First-launch Tabs",
+      "kind": "custom",
+      "refersTo": "tab",
+      "description": "Segmented OS tabs in a ground well; opens on the visitor's OS.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\"><button role=\"tab\" aria-selected=\"true\">macOS</button><button role=\"tab\" aria-selected=\"false\">Windows</button><button role=\"tab\" aria-selected=\"false\">Linux</button></div>",
+      "css": ".ds-tabs{display:flex;gap:4px;padding:4px;width:fit-content;border-radius:8px;background:var(--ground,#121110)}.ds-tabs [role=tab]{min-height:40px;padding:0 20px;border:0;border-radius:6px;background:transparent;color:var(--muted,#a69c8f);font:600 0.94rem system-ui,sans-serif;cursor:pointer;transition:background 120ms ease-out,color 120ms ease-out}.ds-tabs [role=tab]:hover{color:var(--ink,#efe7da)}.ds-tabs [role=tab][aria-selected=true]{background:var(--field-2,#2a2723);color:var(--ink,#efe7da)}.ds-tabs [role=tab]:focus-visible{outline:2px solid var(--tag,#ff8a3d);outline-offset:2px}"
+    },
+    {
+      "name": "Download Tag",
+      "kind": "card",
+      "refersTo": "download-tag",
+      "description": "The one orange live tag: eyelet, printed title and segments, perforated stub with claim no. and Download.",
+      "html": "<div class=\"ds-dl\"><span class=\"ds-eye\"></span><div class=\"ds-dl-body\"><p class=\"ds-dl-title\">For macOS</p><div class=\"ds-segs\"><div class=\"ds-seg\"><p class=\"ds-lbl\">File</p><p class=\"ds-val\">Grapplehook_aarch64.dmg</p></div><div class=\"ds-seg\"><p class=\"ds-lbl\">Size</p><p class=\"ds-val\">9.4 MB</p></div></div></div><div class=\"ds-dl-stub\"><div><p class=\"ds-lbl\">Claim no.</p><p class=\"ds-claim\">0.2.2</p></div><a class=\"ds-take\" href=\"#\">Download</a></div></div>",
+      "css": ".ds-dl{position:relative;display:flex;max-width:560px;background:var(--tag,#ff8a3d);color:var(--tag-ink,#16120d);border-radius:12px 6px 6px 12px;transform:rotate(-3deg);transform-origin:23px 50%;font-family:system-ui,sans-serif}.ds-dl p{margin:0}.ds-eye{position:absolute;left:14px;top:50%;margin-top:-9px;width:18px;height:18px;border-radius:50%;background:var(--ground,#121110)}.ds-dl-body{flex:1;min-width:0;padding:24px 24px 24px 48px}.ds-dl-title{font:700 2.6rem/1 'Barlow Condensed',system-ui,sans-serif;letter-spacing:-0.01em;margin:0 0 16px!important;padding-bottom:16px;border-bottom:2px solid var(--tag-ink,#16120d)}.ds-segs{display:flex}.ds-seg{flex:1 1 0;padding:0 16px;border-left:1px dashed var(--tag-ink,#16120d)}.ds-seg:first-child{padding-left:0;border-left:0}.ds-lbl{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--tag-ink-2,#4a2a12)}.ds-val{margin-top:4px!important;font-weight:700;font-size:0.88rem;overflow-wrap:anywhere}.ds-dl-stub{flex:0 0 152px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:24px 16px 16px 24px;background:linear-gradient(var(--tag-ink,#16120d) 50%,transparent 0) left top/2px 8px repeat-y}.ds-claim{font:800 2.6rem/1 'Barlow Condensed',system-ui,sans-serif;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;margin-top:4px!important}.ds-take{display:flex;align-items:center;justify-content:center;min-height:56px;border-radius:6px;background:var(--tag-ink,#16120d);color:var(--tag,#ff8a3d);font-weight:700;font-size:1.06rem;text-decoration:none;transition:background 120ms ease-out}.ds-take:hover{background:var(--tag-ink-hover,#2b2219)}.ds-take:focus-visible{outline:2px solid var(--tag-ink,#16120d);outline-offset:2px}"
+    },
+    {
+      "name": "Dark Section Tag",
+      "kind": "card",
+      "refersTo": "dark-tag",
+      "description": "Every section: field stock, eyelet, headline over a 2px line rule, optional perforated stub with a claim value and one default button.",
+      "html": "<div class=\"ds-dt\"><span class=\"ds-dt-eye\"></span><div class=\"ds-dt-body\"><h2>Three steps. No terminal.</h2><p>Paste the link, pick what you get, collect the file.</p></div><div class=\"ds-dt-stub\"><div><p class=\"ds-dt-lbl\">Steps</p><p class=\"ds-dt-claim\">3</p></div><a class=\"ds-dt-btn\" href=\"#\">Download</a></div></div>",
+      "css": ".ds-dt{position:relative;display:flex;max-width:900px;background:var(--field,#1e1c19);color:var(--ink,#efe7da);border-radius:8px 4px 4px 8px;font:400 17px/1.55 system-ui,sans-serif}.ds-dt p{margin:0}.ds-dt-eye{position:absolute;left:12px;top:48px;width:16px;height:16px;border-radius:50%;background:var(--ground,#121110)}.ds-dt-body{flex:1;min-width:0;padding:32px 40px 40px 56px}.ds-dt-body h2{margin:0 0 24px;padding-bottom:20px;border-bottom:2px solid var(--line,#3a352f);font:700 3rem/0.95 'Barlow Condensed',system-ui,sans-serif;letter-spacing:-0.01em}.ds-dt-body p{color:var(--muted,#a69c8f)}.ds-dt-stub{flex:0 0 160px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:32px 16px 16px 24px;background:linear-gradient(var(--ground,#121110) 50%,transparent 0) left top/2px 8px repeat-y}.ds-dt-lbl{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted,#a69c8f)}.ds-dt-claim{font:800 1.86rem/1 'Barlow Condensed',system-ui,sans-serif;font-variant-numeric:tabular-nums;margin-top:4px!important}.ds-dt-btn{display:flex;align-items:center;justify-content:center;min-height:48px;padding:8px 12px;border-radius:6px;background:var(--field-2,#2a2723);color:var(--ink,#efe7da);font:600 0.94rem system-ui,sans-serif;text-decoration:none;transition:background 120ms ease-out}.ds-dt-btn:hover{background:var(--line,#3a352f)}.ds-dt-btn:focus-visible{outline:2px solid var(--tag,#ff8a3d);outline-offset:2px}"
+    },
+    {
+      "name": "Rope, Tie and Knot",
+      "kind": "custom",
+      "description": "Orange grapple over the top edge, bone rope with knots, dotted muted tie to a dark tag and a heavier orange tie to the live tag.",
+      "html": "<svg class=\"ds-rope\" width=\"320\" height=\"220\" viewBox=\"0 -10 320 230\" aria-hidden=\"true\"><path class=\"ds-tie\" d=\"M64 120 Q160 132 260 120\"/><path class=\"ds-tie live\" d=\"M64 190 Q160 202 260 190\"/><path class=\"ds-line\" d=\"M64 54 C80 76 48 98 64 120 C80 144 48 166 64 190\"/><circle class=\"ds-knot\" cx=\"64\" cy=\"120\" r=\"5\"/><circle class=\"ds-knot\" cx=\"64\" cy=\"190\" r=\"5\"/><g class=\"ds-hook\"><path d=\"M64 34 V6 M38 10 C38 -10 90 -10 90 10\"/><path class=\"ds-barb\" d=\"M38 16 l-6 -8 h12 z M90 16 l-6 -8 h12 z\"/><circle cx=\"64\" cy=\"44\" r=\"10\"/></g></svg>",
+      "css": ".ds-rope{background:var(--ground,#121110);overflow:visible}.ds-line{fill:none;stroke:var(--ink,#efe7da);stroke-width:5;stroke-linecap:round}.ds-hook path,.ds-hook circle{fill:none;stroke:var(--tag,#ff8a3d);stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.ds-hook circle{stroke-width:5}.ds-hook .ds-barb{fill:var(--tag,#ff8a3d);stroke-width:2}.ds-tie{fill:none;stroke:var(--muted,#a69c8f);stroke-width:2;stroke-dasharray:2 6;stroke-linecap:round}.ds-tie.live{stroke:var(--tag,#ff8a3d);stroke-width:3}.ds-knot{fill:var(--ink,#efe7da)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Rope Line",
+    "overview": "The site lives in the app's Claim Tag world, with the same warm near-black ground, solid unbordered fields, rope-orange stock and near-black print. What the site adds is the rope. An orange grapple hook is caught over the top edge of the page, and a bone rope runs down a fixed left gutter, swaying from side to side between knots. Each section is a dark tag tied to the rope at its eyelet. The download is the one orange tag. It appears twice, at the top of the page and again where the rope ends.\n\nThe page is spacious where the app is dense. It uses a 17px reading size, display headlines up to 6rem, and 96px between tags, but it keeps the app's single 8px module, its single label size and its hierarchy by weight. Everything sits right of the gutter. Each tag swings once as it comes into view, and the rope draws itself down the page as you scroll. With reduced motion the rope and tags are shown complete and still.\n\nThe materials are literal. The eyelet is a hole punched through to the ground colour. Stubs are perforated with 2×8px dashes, and claim numbers use tabular figures. Ties are dotted strokes running from the rope to an eyelet, and only the live tag's tie is orange.",
+    "keyCharacteristics": [
+      "A bone rope with knots in a fixed left gutter, under an orange grapple hook.",
+      "One orange tag, the download, which rests tilted at -3deg. Every section is a dark `field` tag.",
+      "Perforated stubs with a tabular claim value and one action.",
+      "No shadows, no bordered cards, and dashed `line` rules as the only in-flow dividers.",
+      "An 8px module, one label size, and display type used as tag print."
+    ],
+    "rules": [
+      {
+        "name": "The Live Stock Rule",
+        "body": "Solid orange fill is used only for the download tag. Orange as text or stroke marks something live or ordered: links, focus, the hook, the live tie, and step numerals. It is never used as a decorative fill.",
+        "section": "colors"
+      },
+      {
+        "name": "The Printed-On Rule",
+        "body": "Inside the orange tag nothing uses neutral colours. Text, rules, perforation, button and focus outline are all `tag-ink` / `tag-ink-2`, and selection inverts to ink on orange.",
+        "section": "colors"
+      },
+      {
+        "name": "The Bone Rope Rule",
+        "body": "The rope and its knots are bone. Only the hook and the tie to the live tag are orange. Dark tags tie on with a muted dotted line.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Label Rule",
+        "body": "There is exactly one tracked-caps size (0.75rem/600/0.1em). It names a field or the value on a stub, and it never floats above a headline.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Numbers Rule",
+        "body": "Claim values, file sizes and step numerals use tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tag Print Rule",
+        "body": "Barlow Condensed is used only for headings, the wordmark, claim values and step numerals. Running text, links, buttons, tabs and nav use system sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The Solid Field Rule",
+        "body": "Tags and controls are solid fills, with no borders or shadows. Dividers inside a tag are dashed 1px `line` rules (solid 1px `field-2` between table rows), plus one 2px head rule under each title.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do hang every new section as a dark tag right of the gutter, with an eyelet and `data-tie`, so the rope knots it in.",
+      "Do give a dark tag a stub only when it has a real value to claim and one action.",
+      "Do keep every gap, padding and size on the 8px module (4px for tight internal gaps only).",
+      "Do print in `tag-ink` / `tag-ink-2` on orange stock, and switch focus and selection to ink there.",
+      "Do let each tag swing once, and show everything still under reduced motion.",
+      "Do use the 0.75rem tracked-caps label only to name a field or a stub value."
+    ],
+    "donts": [
+      "Don't put a solid orange fill on anything but the download tag.",
+      "Don't draw shadows or borders on tags. Dividers inside a tag are dashed `line` rules.",
+      "Don't add a second label size, or tracked caps floating above a headline.",
+      "Don't set running text, links, buttons or nav in Barlow Condensed.",
+      "Don't colour the rope or the dark-tag ties orange. Orange belongs to the hook and the live tie.",
+      "Don't let a tag swing more than once, or swing tall dark tags on phones."
+    ]
+  }
+}

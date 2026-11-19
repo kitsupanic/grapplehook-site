@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#121110" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" type="image/png" href="%sveltekit.assets%/favicon.png" />
+    <link rel="apple-touch-icon" href="%sveltekit.assets%/apple-touch-icon.png" />
+    <link rel="preload" href="%sveltekit.assets%/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      // Pick the visitor's platform before first paint, so the download tag never flashes the wrong OS.
+      // Phones, tablets and ChromeOS get no data-os and see every platform instead.
+      (function () {
+        var ua = navigator.userAgent;
+        var os = null;
+        if (/Android|iPhone|iPad|iPod|Mobile|CrOS/.test(ua)) os = null;
+        else if (/Mac/.test(ua)) os = navigator.maxTouchPoints > 1 ? null : 'mac';
+        else if (/Win/.test(ua)) os = 'windows';
+        else if (/Linux|X11/.test(ua)) os = 'linux';
+        if (os) document.documentElement.dataset.os = os;
+      })();
+    </script>
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
+</html>

@@ -3,6 +3,7 @@
   import DownloadTag from '#lib/DownloadTag.svelte';
   import FirstLaunch from '#lib/FirstLaunch.svelte';
   import Rope from '#lib/Rope.svelte';
+  import Steps from '#lib/Steps.svelte';
   import { REPO_URL, fetchRelease } from '#lib/release.ts';
 
   let { data } = $props();
@@ -66,20 +67,7 @@
         <div class="dtag-body">
           <h2 id="how-title">Three steps. No terminal.</h2>
           <div class="how">
-            <ol class="steps">
-              <li>
-                <h3>Paste the link</h3>
-                <p>The paste button reads it from your clipboard. You see the video's picture, title and length first.</p>
-              </li>
-              <li>
-                <h3>Pick what you get</h3>
-                <p>Any quality, or just the sound. Choose the folder and the file name. Turn it into an .mp4 if you like.</p>
-              </li>
-              <li>
-                <h3>Collect the file</h3>
-                <p>Each download shows its stage, size, speed and time left. Run several at once, and cancel any of them.</p>
-              </li>
-            </ol>
+            <Steps />
             <figure class="demo">
               <img
                 src="/demo.svg"
@@ -303,30 +291,6 @@
     gap: 40px;
     align-items: start;
   }
-  .steps {
-    padding: 0;
-    list-style: none;
-    counter-reset: step;
-  }
-  .steps li {
-    counter-increment: step;
-    display: grid;
-    grid-template-columns: 56px 1fr;
-    padding: 20px 0;
-    border-top: 1px dashed var(--line);
-  }
-  .steps li:first-child {
-    padding-top: 0;
-    border-top: 0;
-  }
-  .steps li::before {
-    content: counter(step, decimal-leading-zero);
-    grid-row: span 2;
-    font: 800 1.86rem/1 var(--display);
-    color: var(--tag);
-    font-variant-numeric: tabular-nums;
-  }
-  .steps p,
   .pair p {
     color: var(--muted);
   }

@@ -24,6 +24,7 @@
   let still = false;
 
   function layout() {
+    if (!host?.isConnected) return;
     const box = host.getBoundingClientRect();
     w = box.width;
     h = host.scrollHeight;
@@ -56,6 +57,7 @@
   }
 
   function progress() {
+    if (!host?.isConnected) return; // a queued frame can outlive the component
     if (still) {
       drawn = 1;
       return;
@@ -94,7 +96,11 @@
       },
       { rootMargin: '0px 0px -15% 0px' }
     );
-    if (!still) host.querySelectorAll('.swing').forEach((el) => io.observe(el));
+    if (!still) {
+      // Arms the print-in (app.css); without this class every tag's contents simply show.
+      document.documentElement.classList.add('motion');
+      host.querySelectorAll('.swing').forEach((el) => io.observe(el));
+    }
 
     return () => {
       ro.disconnect();

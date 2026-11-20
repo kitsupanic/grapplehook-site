@@ -19,6 +19,8 @@
   let drawn = $state(1);
 
   const EYE = 44;
+  // Tine half-width: 26px, narrower when the rope sits close to the left edge (phones).
+  const span = $derived(Math.min(26, x - 10));
   let still = false;
 
   function layout() {
@@ -123,10 +125,10 @@
       <circle class="knot" cx={x} cy={t.y} r="5" style:opacity={drawn * h >= t.y ? 1 : 0} />
     {/each}
   {/if}
-  <!-- The grapple, its two tines caught over the top edge of the page. -->
+  <!-- The grapple: two barbed tines, kept inside the page's top and left edges. -->
   <g class="hook">
-    <path d="M {x} {EYE - 10} V 6 M {x - 26} 10 C {x - 26} -10 {x + 26} -10 {x + 26} 10" />
-    <path class="barb" d="M {x - 26} 16 l -6 -8 h 12 z M {x + 26} 16 l -6 -8 h 12 z" />
+    <path d="M {x} {EYE - 10} V 8 M {x - span} 20 C {x - span} 2 {x + span} 2 {x + span} 20" />
+    <path class="barb" d="M {x - span} 27 l -5 -7 h 10 z M {x + span} 27 l -5 -7 h 10 z" />
     <circle cx={x} cy={EYE} r="10" />
   </g>
 </svg>

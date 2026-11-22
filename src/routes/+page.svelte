@@ -20,7 +20,7 @@
     if (fresh) release = fresh;
   });
 
-  const SITE = 'https://grapplehook.kitsupanic.com';
+  const SITE = 'https://grapplehook.app';
   const DESC =
     'Paste a video link, pick a quality, get the file. A free desktop app for macOS, Windows and Linux that runs yt-dlp and ffmpeg for you, with a browser extension that sends YouTube videos to it.';
 </script>

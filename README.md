@@ -1,6 +1,6 @@
 # Grapplehook website
 
-Static SvelteKit site (Svelte 5, `adapter-static`, fully prerendered) for [grapplehook.kitsupanic.com](https://grapplehook.kitsupanic.com). The app lives in [kitsupanic/Grapplehook](https://github.com/kitsupanic/Grapplehook).
+Static SvelteKit site (Svelte 5, `adapter-static`, fully prerendered) for [grapplehook.app](https://grapplehook.app). The app lives in [kitsupanic/Grapplehook](https://github.com/kitsupanic/Grapplehook).
 
 ```sh
 pnpm install
@@ -23,7 +23,12 @@ The visitor's platform is picked by a small script in `src/app.html` before firs
 
 ## Deploy to Cloudflare Workers
 
-Served as static assets; `wrangler.jsonc` holds the Worker name, the `build` folder and the custom domain `grapplehook.kitsupanic.com` (the `kitsupanic.com` zone must be on the same Cloudflare account).
+Served as static assets; `wrangler.jsonc` holds the Worker name, the `build` folder and the custom domains (the `grapplehook.app` and `kitsupanic.com` zones must be on the same Cloudflare account).
+
+`grapplehook.app` is the address. Two Redirect Rules, set in the Cloudflare dashboard rather than here, send the others to it with a 301 that keeps the path and query:
+
+- `kitsupanic.com` zone: host `grapplehook.kitsupanic.com`.
+- `grapplehook.app` zone: host `www.grapplehook.app`.
 
 - From Cloudflare (Workers Builds, connected to this repository): build command `pnpm build`, deploy command `pnpm exec wrangler deploy`.
 - By hand: `pnpm build && pnpm exec wrangler deploy`.

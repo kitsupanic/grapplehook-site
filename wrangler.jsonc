@@ -3,5 +3,10 @@
   "name": "grapplehook-site",
   "compatibility_date": "2026-11-01",
   "assets": { "directory": "./build", "not_found_handling": "404-page" },
-  "routes": [{ "pattern": "grapplehook.kitsupanic.com", "custom_domain": true }]
+  // grapplehook.app is the address. The other two only exist so Redirect Rules (README) can send them there.
+  "routes": [
+    { "pattern": "grapplehook.app", "custom_domain": true },
+    { "pattern": "www.grapplehook.app", "custom_domain": true },
+    { "pattern": "grapplehook.kitsupanic.com", "custom_domain": true }
+  ]
 }

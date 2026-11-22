@@ -5,7 +5,7 @@ primary_target: "src/routes/+page.svelte"
 related_targets: ["src/lib"]
 ---
 
-Scope: grapplehook.kitsupanic.com, the one-page site for the Grapplehook desktop app (src/routes/+page.svelte and src/lib/*), plus a 404 page. Mode: Persuade.
+Scope: grapplehook.app, the one-page site for the Grapplehook desktop app (src/routes/+page.svelte and src/lib/*), plus a 404 page. Mode: Persuade.
 
 Audience: anyone with a video link who wants the file, including people who would never open a terminal. Action: download the installer for their OS from the latest GitHub release. Proof on hand: the app's real flow (README demo animation), the real release files, the MIT source. No testimonials, counts or screenshots of other people's videos may be invented.
 

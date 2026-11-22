@@ -3,8 +3,11 @@
   import DownloadTag from '#lib/DownloadTag.svelte';
   import FirstLaunch from '#lib/FirstLaunch.svelte';
   import Rope from '#lib/Rope.svelte';
+  import SendDemo from '#lib/SendDemo.svelte';
   import Steps from '#lib/Steps.svelte';
   import { REPO_URL, fetchRelease } from '#lib/release.ts';
+
+  const EXT_URL = 'https://github.com/kitsupanic/Grapplehook-Extension';
 
   let { data } = $props();
   // Prerendered at build time; refreshed here so a new release shows up without a redeploy.
@@ -19,7 +22,7 @@
 
   const SITE = 'https://grapplehook.kitsupanic.com';
   const DESC =
-    'Paste a video link, pick a quality, get the file. A free desktop app for macOS, Windows and Linux that runs yt-dlp and ffmpeg for you.';
+    'Paste a video link, pick a quality, get the file. A free desktop app for macOS, Windows and Linux that runs yt-dlp and ffmpeg for you, with a browser extension that sends YouTube videos to it.';
 </script>
 
 <svelte:head>
@@ -41,6 +44,7 @@
     <a class="mark" href="/" aria-label="Grapplehook home">grapplehook</a>
     <nav aria-label="Sections">
       <a href="#how">How it works</a>
+      <a href="#extension">Extension</a>
       <a href="#tools">Tools</a>
       <a href="#first-launch">First launch</a>
       <a href="#source">Source</a>
@@ -85,6 +89,52 @@
             <p class="claim">3</p>
           </div>
           <a class="btn" href="#get">Download</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hang sec" id="extension" aria-labelledby="ext-title">
+      <div class="dtag swing" data-tie>
+        <span class="eyelet" aria-hidden="true"></span>
+        <div class="dtag-body">
+          <h2 id="ext-title">Or send it from YouTube.</h2>
+          <p class="lede">
+            The Grapplehook extension for Chrome, Edge, Brave, Arc and Firefox skips the copy and paste. Press its button
+            on a YouTube or YouTube Music video, pick a quality, and Grapplehook opens with that video ready to download.
+          </p>
+          <SendDemo />
+          <ul class="where">
+            <li><b>Under the video,</b> next to Like and Share. Its arrow picks the quality.</li>
+            <li><b>On YouTube Music,</b> in the player bar and on every song in a list.</li>
+            <li><b>On any video link,</b> right-click and choose <i>Send to Grapplehook</i>.</li>
+          </ul>
+          <p class="lede">It isn't in the browser stores yet, so for now you add it by hand. It takes a minute.</p>
+          <div class="pair">
+            <div>
+              <h3>Chrome, Edge, Brave, Arc</h3>
+              <ol class="steps">
+                <li><a href="{EXT_URL}/archive/refs/heads/main.zip">Download the extension</a> and unzip it.</li>
+                <li>Open <code>chrome://extensions</code> and turn on <b>Developer mode</b>.</li>
+                <li>Click <b>Load unpacked</b> and pick the unzipped folder.</li>
+              </ol>
+            </div>
+            <div>
+              <h3>Firefox 121 or later</h3>
+              <ol class="steps">
+                <li><a href="{EXT_URL}/archive/refs/heads/main.zip">Download the extension</a> and unzip it.</li>
+                <li>Open <code>about:debugging#/runtime/this-firefox</code>.</li>
+                <li>Click <b>Load Temporary Add-on…</b> and pick <code>manifest.json</code>. Firefox removes it when it quits.</li>
+              </ol>
+            </div>
+          </div>
+          <p class="more">Needs Grapplehook 0.3.0 or later on your computer.</p>
+        </div>
+        <div class="dtag-stub">
+          <div>
+            <p class="label">Needs app</p>
+            <p class="claim">0.3</p>
+          </div>
+          <a class="btn" href={EXT_URL}>Get it</a>
         </div>
       </div>
     </section>
@@ -339,6 +389,37 @@
   }
   .tools td.opt {
     color: var(--muted);
+  }
+
+  .where {
+    display: grid;
+    gap: 8px;
+    margin: 24px 0 32px;
+    padding: 0;
+    list-style: none;
+    color: var(--muted);
+  }
+  .where b {
+    color: var(--ink);
+  }
+  .steps {
+    display: grid;
+    gap: 8px;
+    padding-left: 1.4em;
+    color: var(--muted);
+  }
+  .steps ::marker {
+    color: var(--tag);
+    font: 700 1em var(--display);
+  }
+  .steps b,
+  .steps code {
+    color: var(--ink);
+    overflow-wrap: anywhere;
+  }
+  .more {
+    color: var(--muted);
+    font-size: 0.94rem;
   }
 
   .fl {

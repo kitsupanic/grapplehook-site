@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import BrowserInstall from '#lib/BrowserInstall.svelte';
   import DownloadTag from '#lib/DownloadTag.svelte';
   import FirstLaunch from '#lib/FirstLaunch.svelte';
   import Rope from '#lib/Rope.svelte';
@@ -8,6 +9,8 @@
   import { REPO_URL, fetchRelease } from '#lib/release.ts';
 
   const EXT_URL = 'https://github.com/kitsupanic/Grapplehook-Extension';
+  const AMO_URL = 'https://addons.mozilla.org/addon/grapplehook/';
+  const FOXIFIED_URL = 'https://chromewebstore.google.com/detail/foxified/cldmemdnllncchfahbcnjijheaolemfk';
 
   let { data } = $props();
   // Prerendered at build time; refreshed here so a new release shows up without a redeploy.
@@ -108,25 +111,7 @@
             <li><b>On YouTube Music,</b> in the player bar and on every song in a list.</li>
             <li><b>On any video link,</b> right-click and choose <i>Send to Grapplehook</i>.</li>
           </ul>
-          <p class="lede">It isn't in the browser stores yet, so for now you add it by hand. It takes a minute.</p>
-          <div class="pair">
-            <div>
-              <h3>Chrome, Edge, Brave, Arc</h3>
-              <ol class="steps">
-                <li><a href="{EXT_URL}/archive/refs/heads/main.zip">Download the extension</a> and unzip it.</li>
-                <li>Open <code>chrome://extensions</code> and turn on <b>Developer mode</b>.</li>
-                <li>Click <b>Load unpacked</b> and pick the unzipped folder.</li>
-              </ol>
-            </div>
-            <div>
-              <h3>Firefox 121 or later</h3>
-              <ol class="steps">
-                <li><a href="{EXT_URL}/archive/refs/heads/main.zip">Download the extension</a> and unzip it.</li>
-                <li>Open <code>about:debugging#/runtime/this-firefox</code>.</li>
-                <li>Click <b>Load Temporary Add-on…</b> and pick <code>manifest.json</code>. Firefox removes it when it quits.</li>
-              </ol>
-            </div>
-          </div>
+          <BrowserInstall amoUrl={AMO_URL} foxifiedUrl={FOXIFIED_URL} byHandUrl="{EXT_URL}#load-it-by-hand" />
           <p class="more">Needs Grapplehook 0.3.0 or later on your computer.</p>
         </div>
         <div class="dtag-stub">
@@ -134,7 +119,7 @@
             <p class="label">Needs app</p>
             <p class="claim">0.3</p>
           </div>
-          <a class="btn" href={EXT_URL}>Get it</a>
+          <a class="btn" href={AMO_URL} target="_blank" rel="noopener">Get it</a>
         </div>
       </div>
     </section>
@@ -176,7 +161,7 @@
             <p class="label">Tools</p>
             <p class="claim">4</p>
           </div>
-          <a class="btn" href="{REPO_URL}#tools">Licenses</a>
+          <a class="btn" href="{REPO_URL}#tools" target="_blank" rel="noopener">Licenses</a>
         </div>
       </div>
     </section>
@@ -186,11 +171,12 @@
         <span class="eyelet" aria-hidden="true"></span>
         <div class="dtag-body">
           <h2 id="fl-title">The first open takes one extra click.</h2>
-          <p class="lede">
-            The builds aren't code-signed yet, so your computer warns you the first time. That's expected, and it only
-            happens once.
-          </p>
-          <div class="fl"><FirstLaunch /></div>
+          <FirstLaunch>
+            <p class="lede">
+              The Mac app is signed and notarized by Apple, so it opens like any other app. The Windows installer isn't
+              signed yet, so Windows warns you the first time. That's expected, and it only happens once.
+            </p>
+          </FirstLaunch>
         </div>
       </div>
     </section>
@@ -228,7 +214,7 @@
             <p class="label">License</p>
             <p class="claim">MIT</p>
           </div>
-          <a class="btn" href={REPO_URL}>View source</a>
+          <a class="btn" href={REPO_URL} target="_blank" rel="noopener">View source</a>
         </div>
       </div>
     </section>
@@ -402,29 +388,11 @@
   .where b {
     color: var(--ink);
   }
-  .steps {
-    display: grid;
-    gap: 8px;
-    padding-left: 1.4em;
-    color: var(--muted);
-  }
-  .steps ::marker {
-    color: var(--tag);
-    font: 700 1em var(--display);
-  }
-  .steps b,
-  .steps code {
-    color: var(--ink);
-    overflow-wrap: anywhere;
-  }
   .more {
     color: var(--muted);
     font-size: 0.94rem;
   }
 
-  .fl {
-    margin-top: 24px;
-  }
   .badge {
     display: inline-block;
     margin-left: 4px;

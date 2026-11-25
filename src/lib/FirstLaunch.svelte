@@ -1,7 +1,10 @@
-<!-- First-launch help for the unsigned builds, one tab per platform; opens on the visitor's own. -->
+<!-- First-launch help, one tab per platform; opens on the visitor's own. -->
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import { onMount, type Snippet } from 'svelte';
+  import LaunchDemo from './LaunchDemo.svelte';
   import { OSES, PLATFORMS, RELEASES_URL, type OS } from './release.ts';
+
+  let { children }: { children?: Snippet } = $props();
 
   let current = $state<OS>('mac');
   const tabs: HTMLButtonElement[] = [];
@@ -20,6 +23,9 @@
   }
 </script>
 
+<div class="split">
+  <div class="copy">
+    {@render children?.()}
 <div class="tabs" role="tablist" aria-label="Your platform" tabindex="-1" onkeydown={onKey}>
   {#each OSES as os, i (os)}
     <button
@@ -35,16 +41,15 @@
 </div>
 
 <div class="panel" role="tabpanel" id="panel-mac" aria-labelledby="tab-mac" hidden={current !== 'mac'}>
-  <p class="why">Apple can't check Grapplehook yet, so macOS stops the first launch.</p>
+  <p class="why">Grapplehook is signed and notarized by Apple, so macOS opens it like any other app.</p>
   <ol>
     <li>Open the <code>.dmg</code> and drag <b>Grapplehook</b> into <b>Applications</b>.</li>
-    <li>Open it once. macOS blocks it. That's fine.</li>
-    <li>Go to <b>System Settings → Privacy &amp; Security</b>, scroll down, click <b>Open Anyway</b> and confirm.</li>
+    <li>Open it. macOS asks whether to open an app downloaded from the internet. Click <b>Open</b>.</li>
   </ol>
   <p class="more">
-    If macOS says the app <i>is damaged and can't be opened</i>, clear the flag it puts on downloads, in Terminal:
+    Releases up to 0.3.0 weren't signed. If an older version is blocked, update to the
+    <a href={RELEASES_URL}>latest release</a>.
   </p>
-  <pre><code>xattr -cr /Applications/Grapplehook.app</code></pre>
 </div>
 
 <div class="panel" role="tabpanel" id="panel-windows" aria-labelledby="tab-windows" hidden={current !== 'windows'}>
@@ -65,16 +70,34 @@
     <code>--appimage-extract-and-run</code>.
   </p>
 </div>
+  </div>
+  <div class="demo"><LaunchDemo os={current} /></div>
+</div>
 
 <p class="verify">
   Want to check the file? Every download's SHA-256 is listed on the <a href={RELEASES_URL}>release page</a>.
 </p>
 
 <style>
+  .split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.8fr);
+    gap: 48px;
+    align-items: start;
+  }
+  @media (max-width: 1100px) {
+    .split {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 32px;
+    }
+    .demo {
+      max-width: 560px;
+    }
+  }
   .tabs {
     display: flex;
     gap: 4px;
-    margin-bottom: 24px;
+    margin: 24px 0;
     padding: 4px;
     width: fit-content;
     max-width: 100%;

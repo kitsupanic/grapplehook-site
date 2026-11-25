@@ -9,7 +9,7 @@ Scope: grapplehook.app, the one-page site for the Grapplehook desktop app (src/r
 
 Audience: anyone with a video link who wants the file, including people who would never open a terminal. Action: download the installer for their OS from the latest GitHub release. Proof on hand: the app's real flow (README demo animation), the real release files, the MIT source. No testimonials, counts or screenshots of other people's videos may be invented.
 
-Must cover: pitch and Download (OS-detected, other platforms beside it), how it works (paste, pick, collect), Tools in plain words (Managed vs System), first-launch help for unsigned builds per OS, the rights note, open source / MIT / build from source.
+Must cover: pitch and Download (OS-detected, other platforms beside it), how it works (paste, pick, collect), Tools in plain words (Managed vs System), first-launch help per OS (macOS is signed and notarized from 0.3.1; Windows is unsigned), the rights note, open source / MIT / build from source.
 
 ## Direction contract
 
